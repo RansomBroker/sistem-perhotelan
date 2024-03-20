@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('positions', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('office_id')
+            $table->foreignId('id_office')
                 ->references('id')
                 ->on('offices')
                 ->onUpdate('cascade')
