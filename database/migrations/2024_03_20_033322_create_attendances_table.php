@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')
                 ->references('id')
-                ->on('id')
+                ->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->dateTime('check_in');
