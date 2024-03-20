@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OfficeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Office management
+Route::controller(OfficeController::class)->group(function () {
+    Route::get('/office', 'get');
+    Route::post('/office/create', 'create');
+    Route::put('/office/update/{office}', 'update');
+    Route::delete('/office/delete/{office}', 'delete');
+});
+
