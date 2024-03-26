@@ -11,9 +11,13 @@
 
     @vite('resources/css/app.css')
 </head>
-<body class="flex min-h-screen min-w-screen items-stretch">
-
-    @include('includes.sidebar')
+<body class="flex min-h-screen w-full items-stretch">
+    <main class="min-h-0 flex-1 flex overflow-hidden">
+        @include('includes.sidebar')
+        <div class="p-4 lg:p-10 w-full">
+            <h1>Test</h1>
+        </div>
+    </main>
 
     <script src="{{ asset('src/js/jquery-3.7.1.min.js') }}"></script>
     <script>
