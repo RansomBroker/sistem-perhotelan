@@ -20,6 +20,10 @@ body {
     background: #edf3ff;
 }
 
+.active {
+    margin-left: -16rem;
+}
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;
