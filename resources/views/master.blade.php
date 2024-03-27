@@ -15,6 +15,7 @@
     <main class="min-h-0 flex-1 flex overflow-hidden">
         @include('includes.sidebar')
         <div class="p-4 lg:p-10 w-full">
+            @include('includes.navbar')
             <h1>Test</h1>
         </div>
     </main>
@@ -22,12 +23,13 @@
     <script src="{{ asset('src/js/jquery-3.7.1.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            $('.sidebar-btn').click(function() {
-               if ($('.sidebar').hasClass('active')) {
-                   $('.sidebar').removeClass('active')
-               } else {
-                   $('.sidebar').addClass('active')
-               }
+
+            $('.sidebar-close').click(function() {
+                $('.sidebar').addClass('active')
+            });
+
+            $('.sidebar-open').click(function() {
+                $('.sidebar').removeClass('active')
             });
         })
     </script>

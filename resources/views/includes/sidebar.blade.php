@@ -11,6 +11,6 @@
     </div>
     {{-- Sidebar button--}}
     <div class="w-full flex justify-center">
-        <button class="sidebar-btn text-4xl"><i class='bx bx-chevron-left-circle text-slate-800'></i></button>
+        <button class="sidebar-close text-4xl"><i class='bx bx-chevron-left-circle text-slate-800'></i></button>
     </div>
 </nav>
